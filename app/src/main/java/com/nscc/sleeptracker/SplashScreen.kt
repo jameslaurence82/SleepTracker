@@ -12,7 +12,6 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
-import com.nscc.sleeptracker.ui.theme.AuthenticationViewModel
 
 @Composable
 fun SplashScreen(authViewModel: AuthenticationViewModel, navController: NavController) {

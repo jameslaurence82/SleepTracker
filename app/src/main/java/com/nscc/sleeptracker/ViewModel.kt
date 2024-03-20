@@ -1,4 +1,4 @@
-package com.nscc.sleeptracker.ui.theme
+package com.nscc.sleeptracker
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
