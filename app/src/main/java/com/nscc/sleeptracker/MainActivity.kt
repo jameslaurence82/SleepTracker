@@ -4,19 +4,11 @@ import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Switch
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -32,17 +24,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.ui.res.painterResource
+import com.nscc.sleeptracker.ui.theme.AuthenticationViewModel
 
 
+// TODO: THIS WILL HOPEFULLY BE USED FOR THE GOOGLE ACCOUNT PROFILE
+//    Fetch Google Fit sleep data here (implement your logic)
 // Define your User class here or import it if it's defined elsewhere
 class User {
     // User's email
     var email: String = ""
     // User's profile picture
     var profilePicture: Bitmap? = null
+    // User's email account name
+    var accountName: String = ""
 }
 
 class MainActivity : ComponentActivity() {
+    private val authViewModel: AuthenticationViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -52,9 +50,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // TODO figure out how to initialize google user object
                     // Initialize your User object here
                     val user = User()
-                    Navigation(user)
+                    Navigation(authViewModel)
                 }
             }
         }
@@ -81,31 +80,18 @@ fun SleepTrackerTheme(content: @Composable () -> Unit) {
 
 // This composable is kept within MainActivity.kt
 @Composable
-fun Navigation(user: User) {
+fun Navigation(authViewModel: AuthenticationViewModel) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "splash") {
-        composable("splash") { SplashScreen(navController) }
-        composable("googleFit") { GoogleFitScreen(navController, user) }
-        composable("settings") { SettingsScreen(user) }
+        composable("splash") { SplashScreen(authViewModel, navController) }
+        composable("googleFit") { GoogleFitScreen(authViewModel, navController) }
+        composable("settings") { SettingsScreen(authViewModel, navController) }
     }
 }
 
-// Previews for other screens can also remain here
-@Preview(showBackground = true)
-@Composable
-fun GoogleFitScreenPreview() {
-    GoogleFitScreen(rememberNavController(), User())
-}
-
-@Preview(showBackground = true)
-@Composable
-fun SettingsScreenPreview() {
-    SettingsScreen(User())
-}
 
 
-// TODO: THIS WILL HOPEFULLY BE USED FOR THE GOOGLE ACCOUNT PROFILE
-//    Fetch Google Fit sleep data here (implement your logic)
+
 //    Display the data in your desired format
 //        Image(
 //            bitmap = user.profilePicture,
