@@ -24,3 +24,4 @@ fun SplashScreen(navController: NavController) {
         }
     }
 }
+// checking to see if changes can be committed
