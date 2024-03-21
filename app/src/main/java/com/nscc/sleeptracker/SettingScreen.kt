@@ -87,7 +87,7 @@ fun SettingsScreen(authViewModel: AuthenticationViewModel, navController: NavCon
         Spacer(modifier=Modifier.height(10.dp))  // Spacer for additional vertical space
 
         // Mutable state holding notification setting status
-        var notificationsEnabled by remember { mutableStateOf(true)}
+        var notificationsEnabled by remember { mutableStateOf(false)}
         // Setting item for notifications with a switch
         SettingItem(name="Notifications", checked=notificationsEnabled,
             onCheckedChange={notificationsEnabled=it})  // Update state when switch is toggled

@@ -20,7 +20,7 @@ fun SplashScreen(authViewModel: AuthenticationViewModel, navController: NavContr
 
     // If the user is signed in, navigate to the main screen
     if (isSignedIn) {
-        navController.navigate("main_screen")
+        navController.navigate("googleFit")
     } else {
         // If the user is not signed in, show the login button
         Column(
@@ -29,10 +29,13 @@ fun SplashScreen(authViewModel: AuthenticationViewModel, navController: NavContr
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = "Sleep Tracker", style = MaterialTheme.typography.bodyMedium)
-            Button(onClick = { /* handle sign in */ }) {
+            Button(onClick = {
+                // TODO: Implement sign-in logic here
+                // After successful sign-in, navigate to the googleFitScreen
+                navController.navigate("googleFit")
+            }) {
                 Text(text = "LOGIN")
             }
         }
     }
 }
-
