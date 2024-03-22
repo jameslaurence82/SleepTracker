@@ -20,7 +20,7 @@ import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 
 
-// TODO: THIS WILL HOPEFULLY BE USED FOR THE GOOGLE ACCOUNT PROFILE
+// TODO: THIS WILL BE USED FOR THE GOOGLE ACCOUNT LOGIN
 //    Fetch Google Fit sleep data here (implement your logic)
 // Define your User class here or import it if it's defined elsewhere
 class User {
@@ -81,19 +81,4 @@ fun Navigation(authViewModel: AuthenticationViewModel) {
         composable("settings") { SettingsScreen(authViewModel, navController) }
     }
 }
-
-
-
-
-//    Display the data in your desired format
-//        Image(
-//            bitmap = user.profilePicture,
-//            contentDescription = "User Profile Picture",
-//            modifier = Modifier.clickable {
-//            // Navigate to Settings screen when profile picture is clicked
-//            navController.navigate("settings")
-//            }
-//        )
-//    }
-//}
 

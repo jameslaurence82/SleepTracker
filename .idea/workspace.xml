@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbc043f3-9065-4fcd-b794-940158c57503" name="Changes" comment="saved all files to local repo, now updating remote">
+    <list default="true" id="bbc043f3-9065-4fcd-b794-940158c57503" name="Changes" comment="Splash screen had wrong route and kept crashing. now fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/SettingScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/SettingScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/SplashScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/SplashScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nscc/sleeptracker/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,21 +91,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;DRAWABLE&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/5-Data Analytics Winter 2024/MOBI3002 - Mobile Application Dev/Project/SleepTracker&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ResourceManagerPrefKey.ResourceType": "DRAWABLE",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/5-Data Analytics Winter 2024/MOBI3002 - Mobile Application Dev/Project/SleepTracker",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\5-Data Analytics Winter 2024\MOBI3002 - Mobile Application Dev\Project\SleepTracker\app\src\main\java\com\nscc\sleeptracker" />
@@ -269,7 +269,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710973554549</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Splash screen had wrong route and kept crashing. now fixed">
+      <option name="closed" value="true" />
+      <created>1711055839105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711055839105</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Splash screen had wrong route and kept crashing. now fixed">
+      <option name="closed" value="true" />
+      <created>1711055851370</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711055851370</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +353,7 @@
     <MESSAGE value="updated code to have ViewModel and modified the setting UI" />
     <MESSAGE value="had the ViewModel.kt in the wrong directory" />
     <MESSAGE value="saved all files to local repo, now updating remote" />
-    <option name="LAST_COMMIT_MESSAGE" value="saved all files to local repo, now updating remote" />
+    <MESSAGE value="Splash screen had wrong route and kept crashing. now fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Splash screen had wrong route and kept crashing. now fixed" />
   </component>
 </project>
