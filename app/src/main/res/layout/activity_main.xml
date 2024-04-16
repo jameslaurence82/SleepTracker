@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp"
-    android:background="@drawable/sleep"> <!-- Ensure the resource name is all lower case -->
+    android:background="@drawable/sleep"
+    tools:ignore="ExtraText"> <!-- Ensure the resource name is all lower case -->
 
-    <!-- This Button is for Google Sign-In -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Sleep Tracker"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/banana"
+    android:scaleType="centerCrop" />
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:layout_marginTop="20dp"/>
+    <!-- Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <!-- No ImageView is necessary since the background image is set on the LinearLayout -->
+        <!-- Text View -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Sleep Tracker"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</LinearLayout>
+        <!-- Sign In Button -->
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</FrameLayout>
